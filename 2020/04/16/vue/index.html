@@ -5,25 +5,25 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//litten.me">
-  <title>Litten的博客</title>
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>王金龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="什么是mvvm？ MVVM是Model-View-ViewModel的缩写。mvvm是一种设计思想。Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象   在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta name="keywords" content="生活,旅行,思考,代码,博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Litten的博客">
-<meta property="og:url" content="//litten.me/2020/04/16/vue/index.html">
-<meta property="og:site_name" content="Litten的博客">
+<meta property="og:title" content="王金龙">
+<meta property="og:url" content="http://yoursite.com/2020/04/16/vue/index.html">
+<meta property="og:site_name" content="王金龙">
 <meta property="og:description" content="什么是mvvm？ MVVM是Model-View-ViewModel的缩写。mvvm是一种设计思想。Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象   在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://7xq6al.com1.z0.glb.clouddn.com/vue-ssr.jpg">
 <meta property="og:updated_time" content="2020-03-26T11:39:06.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Litten的博客">
+<meta name="twitter:title" content="王金龙">
 <meta name="twitter:description" content="什么是mvvm？ MVVM是Model-View-ViewModel的缩写。mvvm是一种设计思想。Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象   在MVVM架构下，View 和 Model 之间并没有直接的联系，而是通过ViewModel">
 <meta name="twitter:image" content="http://7xq6al.com1.z0.glb.clouddn.com/vue-ssr.jpg">
   
-    <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="王金龙" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -53,10 +53,10 @@
 			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Litten</a></h1>
+		  <h1 class="header-author"><a href="/">王金龙</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">胆小认生，不易相处</p>
+		<p class="header-subtitle">面朝大海，春暖花开</p>
 		
 
 		<nav class="header-menu">
@@ -113,10 +113,10 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Litten</h1>
+			  <h1 class="header-author js-header-author">王金龙</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>胆小认生，不易相处<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>面朝大海，春暖花开<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -188,16 +188,16 @@
 <li>销毁前/后：在执行destroy方法后，对data的改变不会再触发周期函数，说明此时vue实例已经解除了事件监听以及和dom的绑定，但是dom结构依然存在</li>
 </ul>
 <h2 id="组件之间的传值？"><a href="#组件之间的传值？" class="headerlink" title="组件之间的传值？"></a>组件之间的传值？</h2><p><strong>父组件与子组件传值</strong></p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">//父组件通过标签上面定义传值</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Main</span> <span class="attr">:obj</span>=<span class="string">"data"</span>&gt;</span><span class="tag">&lt;/<span class="name">Main</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    //引入子组件</span></span><br><span class="line"><span class="xml">    import Main form "./main"</span></span><br><span class="line"><span class="xml">    </span></span><br><span class="line"><span class="xml">    exprot default&#123;</span></span><br><span class="line"><span class="xml">        name:"parent",</span></span><br><span class="line"><span class="xml">        data()&#123;</span></span><br><span class="line"><span class="xml">            return &#123;</span></span><br><span class="line"><span class="xml">                data:"我要向子组件传递数据"</span></span><br><span class="line"><span class="xml">            &#125;</span></span><br><span class="line"><span class="xml">        &#125;,</span></span><br><span class="line"><span class="xml">        //初始化组件</span></span><br><span class="line"><span class="xml">        components:&#123;</span></span><br><span class="line"><span class="xml">            Main</span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="xml">//子组件通过props方法接受数据</span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><span class="template-variable">&#123;&#123;data&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    exprot default&#123;</span></span><br><span class="line"><span class="xml">        name:"son",</span></span><br><span class="line"><span class="xml">        //接受父组件传值</span></span><br><span class="line"><span class="xml">        props:["data"]</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">//父组件通过标签上面定义传值</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;Main :obj=&quot;data&quot;&gt;&lt;/Main&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    //引入子组件</span><br><span class="line">    import Main form &quot;./main&quot;</span><br><span class="line">    </span><br><span class="line">    exprot default&#123;</span><br><span class="line">        name:&quot;parent&quot;,</span><br><span class="line">        data()&#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                data:&quot;我要向子组件传递数据&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        //初始化组件</span><br><span class="line">        components:&#123;</span><br><span class="line">            Main</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//子组件通过props方法接受数据</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123;data&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    exprot default&#123;</span><br><span class="line">        name:&quot;son&quot;,</span><br><span class="line">        //接受父组件传值</span><br><span class="line">        props:[&quot;data&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <p><strong>子组件向父组件传递数据</strong></p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">//子组件通过$emit方法传递参数</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click</span>=<span class="string">"events"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    //引入子组件</span></span><br><span class="line"><span class="xml">    import Main form "./main"</span></span><br><span class="line"><span class="xml">    </span></span><br><span class="line"><span class="xml">    exprot default&#123;</span></span><br><span class="line"><span class="xml">        methods:&#123;</span></span><br><span class="line"><span class="xml">            events:function()&#123;</span></span><br><span class="line"><span class="xml">                </span></span><br><span class="line"><span class="xml">            &#125;</span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="xml">//</span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><span class="template-variable">&#123;&#123;data&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    exprot default&#123;</span></span><br><span class="line"><span class="xml">        name:"son",</span></span><br><span class="line"><span class="xml">        //接受父组件传值</span></span><br><span class="line"><span class="xml">        props:["data"]</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//子组件通过$emit方法传递参数</span><br><span class="line">&lt;template&gt;</span><br><span class="line">   &lt;div v-on:click=&quot;events&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    //引入子组件</span><br><span class="line">    import Main form &quot;./main&quot;</span><br><span class="line">    </span><br><span class="line">    exprot default&#123;</span><br><span class="line">        methods:&#123;</span><br><span class="line">            events:function()&#123;</span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123;data&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    exprot default&#123;</span><br><span class="line">        name:&quot;son&quot;,</span><br><span class="line">        //接受父组件传值</span><br><span class="line">        props:[&quot;data&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="路由之间跳转？"><a href="#路由之间跳转？" class="headerlink" title="路由之间跳转？"></a>路由之间跳转？</h2><p><strong>声明式（标签跳转）</strong></p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link <span class="symbol">:to=<span class="string">"index"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;index&quot;&gt;</span><br></pre></td></tr></table></figure>
 
 <p><strong>编程式（ js跳转）</strong></p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.<span class="keyword">push</span>(<span class="string">'index'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.push(&apos;index&apos;)</span><br></pre></td></tr></table></figure>
 
 <h2 id="vuex是什么？怎么使用？哪种功能场景使用它？"><a href="#vuex是什么？怎么使用？哪种功能场景使用它？" class="headerlink" title="vuex是什么？怎么使用？哪种功能场景使用它？"></a>vuex是什么？怎么使用？哪种功能场景使用它？</h2><blockquote>
 <p>vue框架中状态管理。在main.js引入store，注入。新建了一个目录<code>store</code>，….. <code>export</code> 。场景有：单页应用中，组件之间的状态。音乐播放、登录状态、加入购物车</p>
@@ -327,7 +327,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://litten.me/2020/04/16/vue/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/16/vue/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -395,7 +395,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Litten
+    		&copy; 2020 王金龙
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

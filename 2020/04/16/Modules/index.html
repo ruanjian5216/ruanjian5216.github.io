@@ -5,23 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//litten.me">
-  <title>Litten的博客</title>
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>王金龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="说说你对AMD和Commonjs的理解  CommonJS是服务器端模块的规范，Node.js采用了这个规范。CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数 AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的  模块">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+<meta name="keywords" content="生活,旅行,思考,代码,博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Litten的博客">
-<meta property="og:url" content="//litten.me/2020/04/16/Modules/index.html">
-<meta property="og:site_name" content="Litten的博客">
+<meta property="og:title" content="王金龙">
+<meta property="og:url" content="http://yoursite.com/2020/04/16/Modules/index.html">
+<meta property="og:site_name" content="王金龙">
 <meta property="og:description" content="说说你对AMD和Commonjs的理解  CommonJS是服务器端模块的规范，Node.js采用了这个规范。CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数 AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的  模块">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2020-03-26T11:39:06.298Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Litten的博客">
+<meta name="twitter:title" content="王金龙">
 <meta name="twitter:description" content="说说你对AMD和Commonjs的理解  CommonJS是服务器端模块的规范，Node.js采用了这个规范。CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数 AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的  模块">
   
-    <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="王金龙" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -51,10 +51,10 @@
 			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Litten</a></h1>
+		  <h1 class="header-author"><a href="/">王金龙</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">胆小认生，不易相处</p>
+		<p class="header-subtitle">面朝大海，春暖花开</p>
 		
 
 		<nav class="header-menu">
@@ -111,10 +111,10 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Litten</h1>
+			  <h1 class="header-author js-header-author">王金龙</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>胆小认生，不易相处<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>面朝大海，春暖花开<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -173,13 +173,13 @@
 <ul>
 <li>立即执行函数,不暴露私有成员</li>
 </ul>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> module1 = (<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">　　　　<span class="keyword">var</span> _count = <span class="number">0</span>;</span><br><span class="line">　　　　<span class="keyword">var</span> m1 = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">　　　　　　<span class="comment">//...</span></span><br><span class="line">　　　　&#125;;</span><br><span class="line">　　　　<span class="keyword">var</span> m2 = <span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">　　　　　　<span class="comment">//...</span></span><br><span class="line">　　　　&#125;;</span><br><span class="line">　　　　<span class="keyword">return</span> &#123;</span><br><span class="line">　　　　　　m1 : m1,</span><br><span class="line">　　　　　　m2 : m2</span><br><span class="line">　　　　&#125;;</span><br><span class="line">　　&#125;)();</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var module1 = (function()&#123;</span><br><span class="line">　　　　var _count = 0;</span><br><span class="line">　　　　var m1 = function()&#123;</span><br><span class="line">　　　　　　//...</span><br><span class="line">　　　　&#125;;</span><br><span class="line">　　　　var m2 = function()&#123;</span><br><span class="line">　　　　　　//...</span><br><span class="line">　　　　&#125;;</span><br><span class="line">　　　　return &#123;</span><br><span class="line">　　　　　　m1 : m1,</span><br><span class="line">　　　　　　m2 : m2</span><br><span class="line">　　　　&#125;;</span><br><span class="line">　　&#125;)();</span><br></pre></td></tr></table></figure>
 
 <p><strong>AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？</strong></p>
 <ul>
 <li>Asynchronous Module Definition，异步模块定义，所有的模块将被异步加载，模块加载不影响后面语句运行。所有依赖某些模块的语句均放置在回调函数中</li>
 </ul>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// CMD</span></span><br><span class="line"><span class="function"><span class="title">define</span><span class="params">(function(require, exports, module)</span></span> &#123;</span><br><span class="line">    <span class="selector-tag">var</span> <span class="selector-tag">a</span> = require(<span class="string">'./a'</span>)</span><br><span class="line">    <span class="selector-tag">a</span>.doSomething()</span><br><span class="line">    <span class="comment">// 此处略去 100 行</span></span><br><span class="line">    <span class="selector-tag">var</span> <span class="selector-tag">b</span> = require(<span class="string">'./b'</span>) <span class="comment">// 依赖可以就近书写</span></span><br><span class="line">    <span class="selector-tag">b</span>.doSomething()</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// AMD 默认推荐</span></span><br><span class="line"><span class="function"><span class="title">define</span><span class="params">([<span class="string">'./a'</span>, <span class="string">'./b'</span>], function(a, b)</span></span> &#123; <span class="comment">// 依赖必须一开始就写好</span></span><br><span class="line">    <span class="selector-tag">a</span>.doSomething()</span><br><span class="line">    <span class="comment">// 此处略去 100 行</span></span><br><span class="line">    <span class="selector-tag">b</span>.doSomething()</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// CMD</span><br><span class="line">define(function(require, exports, module) &#123;</span><br><span class="line">    var a = require(&apos;./a&apos;)</span><br><span class="line">    a.doSomething()</span><br><span class="line">    // 此处略去 100 行</span><br><span class="line">    var b = require(&apos;./b&apos;) // 依赖可以就近书写</span><br><span class="line">    b.doSomething()</span><br><span class="line">    // ...</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// AMD 默认推荐</span><br><span class="line">define([&apos;./a&apos;, &apos;./b&apos;], function(a, b) &#123; // 依赖必须一开始就写好</span><br><span class="line">    a.doSomething()</span><br><span class="line">    // 此处略去 100 行</span><br><span class="line">    b.doSomething()</span><br><span class="line">    // ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <p><strong>对前端模块化的认识</strong></p>
 <ul>
@@ -267,7 +267,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://litten.me/2020/04/16/Modules/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/16/Modules/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -335,7 +335,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Litten
+    		&copy; 2020 王金龙
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten

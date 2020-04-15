@@ -5,22 +5,22 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="//litten.me">
-  <title>Litten的博客</title>
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>王金龙</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="华中科技大学09级，就职于腾讯SNG。擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。">
-<meta name="keywords" content="前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,html,css,css3,用户体验">
+  <meta name="description" content="一座孤岛">
+<meta name="keywords" content="生活,旅行,思考,代码,博客">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Litten的博客">
-<meta property="og:url" content="//litten.me/page/2/index.html">
-<meta property="og:site_name" content="Litten的博客">
-<meta property="og:description" content="华中科技大学09级，就职于腾讯SNG。擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。">
-<meta property="og:locale" content="default">
+<meta property="og:title" content="王金龙">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="王金龙">
+<meta property="og:description" content="一座孤岛">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Litten的博客">
-<meta name="twitter:description" content="华中科技大学09级，就职于腾讯SNG。擅长各项前端技能，深入研究移动端开发与前端性能。非专业视觉设计师。此为博客一枚。">
+<meta name="twitter:title" content="王金龙">
+<meta name="twitter:description" content="一座孤岛">
   
-    <link rel="alternative" href="/atom.xml" title="Litten的博客" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="王金龙" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -50,10 +50,10 @@
 			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">Litten</a></h1>
+		  <h1 class="header-author"><a href="/">王金龙</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">胆小认生，不易相处</p>
+		<p class="header-subtitle">面朝大海，春暖花开</p>
 		
 
 		<nav class="header-menu">
@@ -110,10 +110,10 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">Litten</h1>
+			  <h1 class="header-author js-header-author">王金龙</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>胆小认生，不易相处<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>面朝大海，春暖花开<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -159,347 +159,6 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-创建对象和原型链" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h2><h3 id="1-1-面向对象的三大特性"><a href="#1-1-面向对象的三大特性" class="headerlink" title="1.1 面向对象的三大特性"></a>1.1 面向对象的三大特性</h3><ul>
-<li>封装</li>
-<li>继承</li>
-<li>多态</li>
-</ul>
-<h3 id="1-2-原型链的知识"><a href="#1-2-原型链的知识" class="headerlink" title="1.2 原型链的知识"></a>1.2 原型链的知识</h3><blockquote>
-<p>原型链是面向对象的基础，是非常重要的部分。有以下几种知识：</p>
-</blockquote>
-<ul>
-<li>创建对象有几种方法</li>
-<li>原型、构造函数、实例、原型链</li>
-<li><code>instanceof</code>的原理</li>
-<li><code>new</code> 运算符</li>
-</ul>
-<h2 id="2-创建对象有几种方法"><a href="#2-创建对象有几种方法" class="headerlink" title="2 创建对象有几种方法"></a>2 创建对象有几种方法</h2><h3 id="2-1-方式一：字面量"><a href="#2-1-方式一：字面量" class="headerlink" title="2.1 方式一：字面量"></a>2.1 方式一：字面量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj11 = &#123;<span class="attr">name</span>: <span class="string">'smyh'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> obj12 = <span class="keyword">new</span> <span class="built_in">Object</span>(name: <span class="string">`smyh`</span>); <span class="comment">//内置对象（内置的构造函数）</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>上面的两种写法，效果是一样的。因为，第一种写法，<code>obj11</code>会指向<code>Object</code>。</p>
-</blockquote>
-<ul>
-<li>第一种写法是：字面量的方式。</li>
-<li>第二种写法是：内置的构造函数</li>
-</ul>
-<h3 id="2-2-方式二：通过构造函数"><a href="#2-2-方式二：通过构造函数" class="headerlink" title="2.2 方式二：通过构造函数"></a>2.2 方式二：通过构造函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> M = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> obj3 = <span class="keyword">new</span> M(<span class="string">'smyhvae'</span>);</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-3-方法三：Object-create"><a href="#2-3-方法三：Object-create" class="headerlink" title="2.3 方法三：Object.create"></a>2.3 方法三：Object.create</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = &#123;<span class="attr">name</span>:<span class="string">'smyhvae'</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> obj3 = <span class="built_in">Object</span>.create(p);  <span class="comment">//此方法创建的对象，是用原型链连接的</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>第三种方法，很少有人能说出来。这种方式里，<code>obj3</code>是实例，<code>p</code>是<code>obj3的``原型（</code>name<code>是p原型里的属性），构造函数是</code>Objecet` 。</p>
-</blockquote>
-<p><img src="http://img.smyhvae.com/20180306_1633.png" alt></p>
-<h2 id="3-原型、构造函数、实例，以及原型链"><a href="#3-原型、构造函数、实例，以及原型链" class="headerlink" title="3 原型、构造函数、实例，以及原型链"></a>3 原型、构造函数、实例，以及原型链</h2><p><img src="http://img.smyhvae.com/20180306_1540.png" alt></p>
-<blockquote>
-<p>PS：任何一个函数，如果在前面加了<code>new</code>，那就是构造函数。</p>
-</blockquote>
-<h3 id="3-1-原型、构造函数、实例三者之间的关系"><a href="#3-1-原型、构造函数、实例三者之间的关系" class="headerlink" title="3.1 原型、构造函数、实例三者之间的关系"></a>3.1 原型、构造函数、实例三者之间的关系</h3><p><img src="http://img.smyhvae.com/20180306_2107.png" alt></p>
-<ol>
-<li>构造函数通过 <code>new</code> 生成实例</li>
-<li>构造函数也是函数，构造函数的<code>prototype</code>指向原型。（所有的函数有<code>prototype</code>属性，但实例没有 <code>prototype</code>属性）</li>
-<li>原型对象中有 <code>constructor</code>，指向该原型的构造函数。</li>
-</ol>
-<blockquote>
-<p>上面的三行，代码演示：</p>
-</blockquote>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Foo = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">new</span> Foo(<span class="string">'smyhvae'</span>);</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>上面的代码中，<code>Foo.prototype.constructor === Foo</code>的结果是<code>true</code>：</p>
-</blockquote>
-<p><img src="http://img.smyhvae.com/20180306_2120.png" alt></p>
-<ol start="4">
-<li>实例的<code>__proto__</code>指向原型。也就是说，<code>Foo.__proto__ === M.prototype</code>。</li>
-</ol>
-<blockquote>
-<p>声明：所有的<strong>引用类型</strong>（数组、对象、函数）都有<code>__proto__</code>这个属性。</p>
-</blockquote>
-<p><code>Foo.__proto__ === Function.prototype</code>的结果为true，说明<code>Foo</code>这个普通的函数，是<code>Function</code>构造函数的一个实例。</p>
-<h3 id="3-2-原型链"><a href="#3-2-原型链" class="headerlink" title="3.2 原型链"></a>3.2 原型链</h3><p><strong>原型链的基本原理</strong>：任何一个<strong>实例</strong>，通过原型链，找到它上面的<strong>原型</strong>，该原型对象中的方法和属性，可以被所有的原型实例共享。</p>
-<blockquote>
-<p><code>Object</code>是原型链的顶端。</p>
-</blockquote>
-<ul>
-<li>原型可以起到继承的作用。原型里的方法都可以被不同的实例共享：</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//给Foo的原型添加 say 函数</span></span><br><span class="line">Foo.prototype.say = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">''</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>原型链的关键</strong>：在访问一个实例的时候，如果实例本身没找到此方法或属性，就往原型上找。如果还是找不到，继续往上一级的原型上找。</p>
-<h3 id="3-3-instanceof的原理"><a href="#3-3-instanceof的原理" class="headerlink" title="3.3 instanceof的原理"></a>3.3 <code>instanceof</code>的原理</h3><p><img src="http://img.smyhvae.com/20180306_2209.png" alt></p>
-<ul>
-<li><code>instanceof</code>的<strong>作用</strong>：用于判断<strong>实例</strong>属于哪个<strong>构造函数</strong>。</li>
-<li><code>instanceof</code>的<strong>原理</strong>：判断实例对象的<code>__proto__</code>属性，和构造函数的<code>prototype</code>属性，是否为同一个引用（是否指向同一个地址）。</li>
-</ul>
-<blockquote>
-<ul>
-<li><strong>注意1</strong>：虽然说，实例是由构造函数 new 出来的，但是实例的<code>__proto__</code>属性引用的是构造函数的<code>prototype</code>。也就是说，实例的<code>__proto__</code>属性与构造函数本身无关。</li>
-<li><strong>注意2</strong>：在原型链上，原型的上面可能还会有原型，以此类推往上走，继续找<code>__proto__</code>属性。这条链上如果能找到， instanceof 的返回结果也是 true。</li>
-</ul>
-</blockquote>
-<p>比如说：</p>
-<ul>
-<li><code>foo instance of Foo</code>的结果为true，因为<code>foo.__proto__ === M.prototype</code>为<code>true</code>。</li>
-<li><strong><code>foo instance of Objecet</code>的结果也为true</strong>，为<code>Foo.prototype.__proto__ === Object.prototype</code>为<code>true</code>。</li>
-</ul>
-<blockquote>
-<p>但我们不能轻易的说：<code>foo</code> 一定是 由<code>Object</code>创建的实例`。这句话是错误的。我们来看下一个问题就明白了。</p>
-</blockquote>
-<h3 id="3-4-分析一个问题"><a href="#3-4-分析一个问题" class="headerlink" title="3.4 分析一个问题"></a>3.4 分析一个问题</h3><p><strong>问题：</strong>已知A继承了B，B继承了C。怎么判断 a 是由A<strong>直接生成</strong>的实例，还是B直接生成的实例呢？还是C直接生成的实例呢？</p>
-<blockquote>
-<p>分析：这就要用到原型的<code>constructor</code>属性了。</p>
-</blockquote>
-<ul>
-<li><code>foo.__proto__.constructor === M</code>的结果为<code>true</code>，但是 <code>foo.__proto__.constructor === Object</code>的结果为<code>false</code>。</li>
-<li>所以，用 <code>consturctor</code>判断就比用 <code>instanceof</code>判断，更为严谨。</li>
-</ul>
-<h2 id="4-new-运算符"><a href="#4-new-运算符" class="headerlink" title="4 new 运算符"></a>4 new 运算符</h2><blockquote>
-<p>当<code>new Foo()</code>时发生了什么：</p>
-</blockquote>
-<ul>
-<li>创建一个<strong>新的空对象实例</strong>。</li>
-<li>将此空对象的隐式原型指向其构造函数的显示原型。</li>
-<li>执行构造函数（传入相应的参数，如果没有参数就不用传），同时 <code>this</code> 指向这个新实例。</li>
-<li>如果返回值是一个新对象，那么直接返回该对象；如果无返回值或者返回一个非对象值，那么就将步骤（1）创建的对象返回。</li>
-</ul>
-<pre><code></code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/16/创建对象和原型链/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-安全问题：CSRF和XSS" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1 前言"></a>1 前言</h2><blockquote>
-<p>面试中的安全问题，明确来说，就两个方面：</p>
-</blockquote>
-<ul>
-<li><code>CSRF</code>：基本概念、攻击方式、防御措施</li>
-<li><code>XSS</code>：基本概念、攻击方式、防御措施</li>
-</ul>
-<blockquote>
-<p>这两个问题，一般不会问太难。</p>
-</blockquote>
-<blockquote>
-<p>有人问：<code>SQL</code>注入算吗？答案：这个其实跟前端的关系不是很大。</p>
-</blockquote>
-<h2 id="2-CSRF"><a href="#2-CSRF" class="headerlink" title="2 CSRF"></a>2 CSRF</h2><blockquote>
-<p>问的不难，一般问：</p>
-</blockquote>
-<ul>
-<li><code>CSRF</code>的基本概念、缩写、全称</li>
-<li>攻击原理</li>
-<li>防御措施</li>
-</ul>
-<blockquote>
-<p>如果把<strong>攻击原理</strong>和<strong>防御措施</strong>掌握好，基本没什么问题。</p>
-</blockquote>
-<h3 id="2-1-CSRF的基本概念、缩写、全称"><a href="#2-1-CSRF的基本概念、缩写、全称" class="headerlink" title="2.1 CSRF的基本概念、缩写、全称"></a>2.1 CSRF的基本概念、缩写、全称</h3><blockquote>
-<p><code>CSRF</code>（<code>Cross-site request forgery</code>）：<strong>跨站请求伪造</strong>。</p>
-</blockquote>
-<p>PS：中文名一定要记住。英文全称，如果记不住也拉倒。</p>
-<h3 id="2-2-CSRF的攻击原理"><a href="#2-2-CSRF的攻击原理" class="headerlink" title="2.2 CSRF的攻击原理"></a>2.2 CSRF的攻击原理</h3><p><img src="http://img.smyhvae.com/20180307_1735.png" alt></p>
-<blockquote>
-<p>用户是网站A的注册用户，且登录进去，于是网站A就给用户下发<code>cookie</code>。</p>
-</blockquote>
-<blockquote>
-<p>从上图可以看出，要完成一次<code>CSRF</code>攻击，受害者必须满足两个必要的条件：</p>
-</blockquote>
-<ol>
-<li>登录受信任网站<code>A</code>，并在本地生成<code>Cookie</code>。（如果用户没有登录网站<code>A</code>，那么网站<code>B</code>在诱导的时候，请求网站<code>A</code>的<code>api</code>接口时，会提示你登录）</li>
-<li>在不登出<code>A</code>的情况下，访问危险网站<code>B</code>（其实是利用了网站<code>A</code>的漏洞）。</li>
-</ol>
-<blockquote>
-<p>我们在讲<code>CSRF</code>时，一定要把上面的两点说清楚。</p>
-</blockquote>
-<blockquote>
-<p>温馨提示一下，<code>cookie</code>保证了用户可以处于登录状态，但网站<code>B</code>其实拿不到 <code>cookie</code>。</p>
-</blockquote>
-<blockquote>
-<p>举个例子，前段时间里，微博网站有个<code>api</code>接口有漏洞，导致很多用户的粉丝暴增。</p>
-</blockquote>
-<h3 id="2-3-CSRF如何防御"><a href="#2-3-CSRF如何防御" class="headerlink" title="2.3 CSRF如何防御"></a>2.3 CSRF如何防御</h3><p><strong>方法一、Token 验证：</strong>（用的最多）</p>
-<ol>
-<li>服务器发送给客户端一个<code>token</code>；</li>
-<li>客户端提交的表单中带着这个<code>token</code>。</li>
-<li>如果这个 <code>token</code> 不合法，那么服务器拒绝这个请求。</li>
-</ol>
-<p><strong>方法二：隐藏令牌：</strong></p>
-<ul>
-<li>把 <code>token</code> 隐藏在 <code>http</code> 的 <code>head</code>头中。</li>
-</ul>
-<blockquote>
-<p>方法二和方法一有点像，本质上没有太大区别，只是使用方式上有区别。</p>
-</blockquote>
-<p><strong>方法三、Referer 验证：</strong></p>
-<blockquote>
-<p><code>Referer</code> 指的是页面请求来源。意思是，<strong>只接受本站的请求，服务器才做响应</strong>；如果不是，就拦截。</p>
-</blockquote>
-<h2 id="3-XSS"><a href="#3-XSS" class="headerlink" title="3 XSS"></a>3 XSS</h2><h3 id="3-1-XSS的基本概念"><a href="#3-1-XSS的基本概念" class="headerlink" title="3.1 XSS的基本概念"></a>3.1 XSS的基本概念</h3><blockquote>
-<p>`XSS（Cross Site Scripting）``：<strong>跨域脚本攻击</strong>。</p>
-</blockquote>
-<ul>
-<li>接下来，我们详细讲一下 <code>XSS</code> 的内容。</li>
-</ul>
-<blockquote>
-<p>预备知识：<code>HTTP</code>、<code>Cookie</code>、<code>Ajax</code>。</p>
-</blockquote>
-<h3 id="3-2-XSS的攻击原理"><a href="#3-2-XSS的攻击原理" class="headerlink" title="3.2 XSS的攻击原理"></a>3.2 XSS的攻击原理</h3><blockquote>
-<p><code>XSS</code>攻击的核心原理是：不需要你做任何的登录认证，它会通过合法的操作（比如在<code>url</code>中输入、在评论框中输入），向你的页面注入脚本（可能是<code>js</code>、<code>hmtl</code>代码块等）。</p>
-</blockquote>
-<blockquote>
-<p>最后导致的结果可能是：</p>
-</blockquote>
-<ul>
-<li>盗用<code>Cookie</code></li>
-<li>破坏页面的正常结构，插入广告等恶意内容</li>
-<li><code>D-doss</code>攻击</li>
-</ul>
-<h3 id="3-3-XSS的攻击方式"><a href="#3-3-XSS的攻击方式" class="headerlink" title="3.3 XSS的攻击方式"></a>3.3 XSS的攻击方式</h3><ol>
-<li>反射型</li>
-</ol>
-<blockquote>
-<p>发出请求时，<code>XSS</code>代码出现在<code>url</code>中，作为输入提交到服务器端，服务器端解析后响应，<code>XSS</code>代码随响应内容一起传回给浏览器，最后浏览器解析执行<code>XSS</code>代码。这个过程像一次反射，所以叫反射型<code>XSS</code>。</p>
-</blockquote>
-<ol start="2">
-<li>存储型</li>
-</ol>
-<blockquote>
-<p>存储型<code>XSS</code>和反射型<code>XSS</code>的差别在于，提交的代码会存储在服务器端（数据库、内存、文件系统等），下次请求时目标页面时不用再提交XSS代码。</p>
-</blockquote>
-<h3 id="3-4-XSS的防范措施（encode-过滤）"><a href="#3-4-XSS的防范措施（encode-过滤）" class="headerlink" title="3.4 XSS的防范措施（encode + 过滤）"></a>3.4 XSS的防范措施（encode + 过滤）</h3><p><strong>XSS的防范措施主要有三个：</strong></p>
-<p><strong>1. 编码</strong>：</p>
-<blockquote>
-<p>对用户输入的数据进行<code>HTML Entity</code>编码。</p>
-</blockquote>
-<p>如上图所示，把字符转换成 转义字符。</p>
-<blockquote>
-<p><code>Encode</code>的作用是将<code>$var</code>等一些字符进行转化，使得浏览器在最终输出结果上是一样的。</p>
-</blockquote>
-<p>比如说这段代码：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span>alert(1)<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>若不进行任何处理，则浏览器会执行alert的js操作，实现XSS注入。</p>
-</blockquote>
-<blockquote>
-<p>进行编码处理之后，L在浏览器中的显示结果就是<code>&lt;script&gt;alert(1)&lt;/script&gt;</code>，实现了将``$var<code>作为纯文本进行输出，且不引起J</code>avaScript`的执行。</p>
-</blockquote>
-<p><strong>2、过滤：</strong></p>
-<ul>
-<li>移除用户输入的和事件相关的属性。如<code>onerror</code>可以自动触发攻击，还有<code>onclick</code>等。（总而言是，过滤掉一些不安全的内容）</li>
-<li>移除用户输入的<code>Style</code>节点、<code>Script</code>节点、<code>Iframe</code>节点。（尤其是<code>Script</code>节点，它可是支持跨域的呀，一定要移除）。</li>
-</ul>
-<p><strong>3、校正</strong></p>
-<ul>
-<li>避免直接对<code>HTML Entity</code>进行解码。</li>
-<li>使用<code>DOM Parse</code>转换，校正不配对的<code>DOM</code>标签。</li>
-</ul>
-<blockquote>
-<p>备注：我们应该去了解一下<code>DOM Parse</code>这个概念，它的作用是把文本解析成<code>DOM</code>结构。</p>
-</blockquote>
-<p>比较常用的做法是，通过第一步的编码转成文本，然后第三步转成<code>DOM</code>对象，然后经过第二步的过滤。</p>
-<p><strong>还有一种简洁的答案：</strong></p>
-<p>首先是encode，如果是富文本，就白名单。</p>
-<h2 id="4-CSRF-和-XSS-的区别"><a href="#4-CSRF-和-XSS-的区别" class="headerlink" title="4 CSRF 和 XSS 的区别"></a>4 CSRF 和 XSS 的区别</h2><blockquote>
-<p>面试官还可能喜欢问二者的区别。</p>
-</blockquote>
-<p><strong>区别一：</strong></p>
-<ul>
-<li><code>CSRF</code>：需要用户先登录网站<code>A</code>，获取 <code>cookie</code></li>
-<li><code>XSS</code>：不需要登录。</li>
-</ul>
-<p><strong>区别二：（原理的区别）</strong></p>
-<ul>
-<li><code>CSRF</code>：是利用网站<code>A</code>本身的漏洞，去请求网站<code>A</code>的<code>api</code>。</li>
-<li><code>XSS</code>：是向网站 <code>A</code> 注入 <code>JS</code>代码，然后执行 <code>JS</code> 里的代码，篡改网站<code>A</code>的内容。</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/16/安全问题：CSRF和XSS/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
     <article id="post-web-security" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -654,16 +313,16 @@
 <li>销毁前/后：在执行destroy方法后，对data的改变不会再触发周期函数，说明此时vue实例已经解除了事件监听以及和dom的绑定，但是dom结构依然存在</li>
 </ul>
 <h2 id="组件之间的传值？"><a href="#组件之间的传值？" class="headerlink" title="组件之间的传值？"></a>组件之间的传值？</h2><p><strong>父组件与子组件传值</strong></p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">//父组件通过标签上面定义传值</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">Main</span> <span class="attr">:obj</span>=<span class="string">"data"</span>&gt;</span><span class="tag">&lt;/<span class="name">Main</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    //引入子组件</span></span><br><span class="line"><span class="xml">    import Main form "./main"</span></span><br><span class="line"><span class="xml">    </span></span><br><span class="line"><span class="xml">    exprot default&#123;</span></span><br><span class="line"><span class="xml">        name:"parent",</span></span><br><span class="line"><span class="xml">        data()&#123;</span></span><br><span class="line"><span class="xml">            return &#123;</span></span><br><span class="line"><span class="xml">                data:"我要向子组件传递数据"</span></span><br><span class="line"><span class="xml">            &#125;</span></span><br><span class="line"><span class="xml">        &#125;,</span></span><br><span class="line"><span class="xml">        //初始化组件</span></span><br><span class="line"><span class="xml">        components:&#123;</span></span><br><span class="line"><span class="xml">            Main</span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="xml">//子组件通过props方法接受数据</span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><span class="template-variable">&#123;&#123;data&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    exprot default&#123;</span></span><br><span class="line"><span class="xml">        name:"son",</span></span><br><span class="line"><span class="xml">        //接受父组件传值</span></span><br><span class="line"><span class="xml">        props:["data"]</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">//父组件通过标签上面定义传值</span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;Main :obj=&quot;data&quot;&gt;&lt;/Main&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    //引入子组件</span><br><span class="line">    import Main form &quot;./main&quot;</span><br><span class="line">    </span><br><span class="line">    exprot default&#123;</span><br><span class="line">        name:&quot;parent&quot;,</span><br><span class="line">        data()&#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                data:&quot;我要向子组件传递数据&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        //初始化组件</span><br><span class="line">        components:&#123;</span><br><span class="line">            Main</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//子组件通过props方法接受数据</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123;data&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    exprot default&#123;</span><br><span class="line">        name:&quot;son&quot;,</span><br><span class="line">        //接受父组件传值</span><br><span class="line">        props:[&quot;data&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <p><strong>子组件向父组件传递数据</strong></p>
-<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">//子组件通过$emit方法传递参数</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-on:click</span>=<span class="string">"events"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    //引入子组件</span></span><br><span class="line"><span class="xml">    import Main form "./main"</span></span><br><span class="line"><span class="xml">    </span></span><br><span class="line"><span class="xml">    exprot default&#123;</span></span><br><span class="line"><span class="xml">        methods:&#123;</span></span><br><span class="line"><span class="xml">            events:function()&#123;</span></span><br><span class="line"><span class="xml">                </span></span><br><span class="line"><span class="xml">            &#125;</span></span><br><span class="line"><span class="xml">        &#125;</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="xml">//</span></span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><span class="template-variable">&#123;&#123;data&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml">    exprot default&#123;</span></span><br><span class="line"><span class="xml">        name:"son",</span></span><br><span class="line"><span class="xml">        //接受父组件传值</span></span><br><span class="line"><span class="xml">        props:["data"]</span></span><br><span class="line"><span class="xml">    &#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//子组件通过$emit方法传递参数</span><br><span class="line">&lt;template&gt;</span><br><span class="line">   &lt;div v-on:click=&quot;events&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    //引入子组件</span><br><span class="line">    import Main form &quot;./main&quot;</span><br><span class="line">    </span><br><span class="line">    exprot default&#123;</span><br><span class="line">        methods:&#123;</span><br><span class="line">            events:function()&#123;</span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123;data&#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    exprot default&#123;</span><br><span class="line">        name:&quot;son&quot;,</span><br><span class="line">        //接受父组件传值</span><br><span class="line">        props:[&quot;data&quot;]</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="路由之间跳转？"><a href="#路由之间跳转？" class="headerlink" title="路由之间跳转？"></a>路由之间跳转？</h2><p><strong>声明式（标签跳转）</strong></p>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link <span class="symbol">:to=<span class="string">"index"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to=&quot;index&quot;&gt;</span><br></pre></td></tr></table></figure>
 
 <p><strong>编程式（ js跳转）</strong></p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.<span class="keyword">push</span>(<span class="string">'index'</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.push(&apos;index&apos;)</span><br></pre></td></tr></table></figure>
 
 <h2 id="vuex是什么？怎么使用？哪种功能场景使用它？"><a href="#vuex是什么？怎么使用？哪种功能场景使用它？" class="headerlink" title="vuex是什么？怎么使用？哪种功能场景使用它？"></a>vuex是什么？怎么使用？哪种功能场景使用它？</h2><blockquote>
 <p>vue框架中状态管理。在main.js引入store，注入。新建了一个目录<code>store</code>，….. <code>export</code> 。场景有：单页应用中，组件之间的状态。音乐播放、登录状态、加入购物车</p>
@@ -967,9 +626,9 @@
 <h2 id="传入-setState-函数的第二个参数的作用是什么？"><a href="#传入-setState-函数的第二个参数的作用是什么？" class="headerlink" title="传入 setState 函数的第二个参数的作用是什么？"></a>传入 setState 函数的第二个参数的作用是什么？</h2><blockquote>
 <p>该函数会在setState函数调用完成并且组件开始重渲染的时候被调用，我们可以用该函数来监听渲染是否完成：</p>
 </blockquote>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.setState(</span><br><span class="line">  &#123; username: <span class="string">'tylermcginnis33'</span> &#125;,</span><br><span class="line">  () =&gt; <span class="built_in">console</span>.log(<span class="string">'setState has finished and the component has re-rendered.'</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.setState(</span><br><span class="line">  &#123; username: &apos;tylermcginnis33&apos; &#125;,</span><br><span class="line">  () =&gt; console.log(&apos;setState has finished and the component has re-rendered.&apos;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.setState(<span class="function"><span class="params">(prevState, props)</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    streak: prevState.streak + props.count</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">this.setState((prevState, props) =&gt; &#123;</span><br><span class="line">  return &#123;</span><br><span class="line">    streak: prevState.streak + props.count</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 <h2 id="React-中-refs-的作用是什么"><a href="#React-中-refs-的作用是什么" class="headerlink" title="React 中 refs 的作用是什么"></a>React 中 refs 的作用是什么</h2><ul>
 <li>Refs 是 React 提供给我们的安全访问 DOM 元素或者某个组件实例的句柄</li>
@@ -1173,9 +832,521 @@
 
 
   
+    <article id="post-performance-optimization" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><hr>
+<p><strong>如何进行网站性能优化</strong></p>
+<ul>
+<li><p>content方面</p>
+<ul>
+<li>减少HTTP请求：合并文件、CSS精灵、inline Image</li>
+<li>减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS缓存、将资源分布到恰当数量的主机名，平衡并行下载和DNS查询</li>
+<li>避免重定向：多余的中间访问</li>
+<li>使Ajax可缓存</li>
+<li>非必须组件延迟加载</li>
+<li>未来所需组件预加载</li>
+<li>减少DOM元素数量</li>
+<li>将资源放到不同的域下：浏览器同时从一个域下载资源的数目有限，增加域可以提高并行下载量</li>
+<li>减少iframe数量</li>
+<li>不要404</li>
+</ul>
+</li>
+<li><p>Server方面</p>
+<ul>
+<li>使用CDN</li>
+<li>添加Expires或者Cache-Control响应头</li>
+<li>对组件使用Gzip压缩</li>
+<li>配置ETag</li>
+<li>Flush Buffer Early</li>
+<li>Ajax使用GET进行请求</li>
+<li>避免空src的img标签</li>
+</ul>
+</li>
+<li><p>Cookie方面</p>
+<ul>
+<li>减小cookie大小</li>
+<li>引入资源的域名不要包含cookie</li>
+</ul>
+</li>
+<li><p>css方面</p>
+<ul>
+<li>将样式表放到页面顶部</li>
+<li>不使用CSS表达式</li>
+<li>不使用IE的Filter</li>
+</ul>
+</li>
+<li><p>Javascript方面</p>
+<ul>
+<li>将脚本放到页面底部</li>
+<li>将javascript和css从外部引入</li>
+<li>压缩javascript和css</li>
+<li>删除不需要的脚本</li>
+<li>减少DOM访问</li>
+<li>合理设计事件监听器</li>
+</ul>
+</li>
+<li><p>图片方面</p>
+<ul>
+<li>优化图片：根据实际颜色需要选择色深、压缩</li>
+<li>优化css精灵</li>
+<li>不要在HTML中拉伸图片</li>
+<li>保证favicon.ico小并且可缓存</li>
+</ul>
+</li>
+<li><p>移动方面</p>
+<ul>
+<li>保证组件小于25k</li>
+<li><code>Pack Components into a Multipart Document</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>你有用过哪些前端性能优化的方法？</strong></p>
+<ul>
+<li>减少http请求次数：CSS Sprites, JS、CSS源码压缩、图片大小控制合适；网页Gzip，CDN托管，data缓存 ，图片服务器。</li>
+<li>前端模板 JS+数据，减少由于HTML标签导致的带宽浪费，前端用变量保存AJAX请求结果，每次操作本地变量，不用请求，减少请求次数</li>
+<li>用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能。</li>
+<li>当需要设置的样式很多时设置className而不是直接操作style</li>
+<li>少用全局变量、缓存DOM节点查找的结果。减少IO读取操作</li>
+<li>避免使用CSS Expression（css表达式)又称Dynamic properties(动态属性)</li>
+<li>图片预加载，将样式表放在顶部，将脚本放在底部  加上时间戳</li>
+<li>避免在页面的主体布局中使用table，table要等其中的内容完全下载之后才会显示出来，显示比div+css布局慢</li>
+</ul>
+<p><strong>谈谈性能优化问题</strong></p>
+<ul>
+<li>代码层面：避免使用css表达式，避免使用高级选择器，通配选择器</li>
+<li>缓存利用：缓存Ajax，使用CDN，使用外部js和css文件以便缓存，添加Expires头，服务端配置Etag，减少DNS查找等</li>
+<li>请求数量：合并样式和脚本，使用css图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载</li>
+<li>请求带宽：压缩文件，开启GZIP</li>
+</ul>
+<p><strong>代码层面的优化</strong></p>
+<ul>
+<li><p>用hash-table来优化查找</p>
+</li>
+<li><p>少用全局变量</p>
+</li>
+<li><p>用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能</p>
+</li>
+<li><p>用setTimeout来避免页面失去响应</p>
+</li>
+<li><p>缓存DOM节点查找的结果</p>
+</li>
+<li><p>避免使用CSS Expression</p>
+</li>
+<li><p>避免全局查询</p>
+</li>
+<li><p>避免使用with(with会创建自己的作用域，会增加作用域链长度)</p>
+</li>
+<li><p>多个变量声明合并</p>
+</li>
+<li><p>避免图片和iFrame等的空Src。空Src会重新加载当前页面，影响速度和效率</p>
+</li>
+<li><p>尽量避免写在HTML标签中写Style属性</p>
+</li>
+</ul>
+<p><strong>前端性能优化最佳实践？</strong></p>
+<ul>
+<li>性能评级工具（PageSpeed 或 YSlow）</li>
+<li>合理设置 HTTP 缓存：Expires 与 Cache-control</li>
+<li>静态资源打包，开启 Gzip 压缩（节省响应流量）</li>
+<li>CSS3 模拟图像，图标base64（降低请求数）</li>
+<li>模块延迟(defer)加载/异步(async)加载</li>
+<li>Cookie 隔离（节省请求流量）</li>
+<li>localStorage（本地存储）</li>
+<li>使用 CDN 加速（访问最近服务器）</li>
+<li>启用 HTTP/2（多路复用，并行加载）</li>
+<li>前端自动化（gulp/webpack）</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/16/performance-optimization/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-other" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>如何评价AngularJS和BackboneJS</strong></p>
+<ul>
+<li><p>backbone具有依赖性，依赖underscore.js。Backbone + Underscore + jQuery(or Zepto)就比一个AngularJS 多出了2 次HTTP请求.</p>
+</li>
+<li><p>Backbone的Model没有与UI视图数据绑定，而是需要在View中自行操作DOM来更新或读取UI数据。AngularJS与此相反，Model直接与UI视图绑定，Model与UI视图的关系，通过directive封装，AngularJS内置的通用directive，就能实现大部分操作了，也就是说，基本不必关心Model与UI视图的关系，直接操作Model就行了，UI视图自动更新</p>
+</li>
+<li><p>AngularJS的directive，你输入特定数据，他就能输出相应UI视图。是一个比较完善的前端MVW框架，包含模板，数据双向绑定，路由，模块化，服务，依赖注入等所有功能，模板功能强大丰富，并且是声明式的，自带了丰富的 Angular 指令</p>
+</li>
+</ul>
+<p><strong>谈谈你对重构的理解</strong></p>
+<ul>
+<li><p>网站重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。也就是说是在不改变UI的情况下，对网站进行优化， 在扩展的同时保持一致的UI</p>
+</li>
+<li><p>对于传统的网站来说重构通常是：</p>
+<ul>
+<li><p>表格(table)布局改为DIV+CSS</p>
+</li>
+<li><p>使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)</p>
+</li>
+<li><p>对于移动平台的优化</p>
+</li>
+<li><p>针对于SEO进行优化</p>
+</li>
+<li><p>深层次的网站重构应该考虑的方面</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>说说你对前端架构师的理解</strong></p>
+<ul>
+<li>负责前端团队的管理及与其他团队的协调工作，提升团队成员能力和整体效率；带领团队完成研发工具及平台前端部分的设计、研发和维护； 带领团队进行前端领域前沿技术研究及新技术调研，保证团队的技术领先负责前端开发规范制定、功能模块化设计、公共组件搭建等工作，并组织培训</li>
+</ul>
+<p><strong>什么样的前端代码是好的</strong></p>
+<ul>
+<li>高复用低耦合，这样文件小，好维护，而且好扩展。</li>
+</ul>
+<p><strong>谈谈你对webpack的看法</strong></p>
+<blockquote>
+<p>WebPack 是一个模块打包工具，你可以使用WebPack管理你的模块依赖，并编绎输出模块们所需的静态文件。它能够很好地管理、打包Web开发中所用到的HTML、Javascript、CSS以及各种静态文件（图片、字体等），让开发过程更加高效。对于不同类型的资源，webpack有对应的模块加载器。webpack模块打包器会分析模块间的依赖关系，最后 生成了优化且合并后的静态资源</p>
+</blockquote>
+<p><strong>页面重构怎么操作？</strong></p>
+<ul>
+<li><p>网站重构：不改变UI的情况下，对网站进行优化，在扩展的同时保持一致的UI。</p>
+</li>
+<li><p>页面重构可以考虑的方面：</p>
+<ul>
+<li>升级第三方依赖</li>
+<li>使用HTML5、CSS3、ES6 新特性</li>
+<li>加入响应式布局</li>
+<li>统一代码风格规范</li>
+<li>减少代码间的耦合</li>
+<li>压缩/合并静态资源</li>
+<li>程序的性能优化</li>
+<li>采用CDN来加速资源加载</li>
+<li>对于JS DOM的优化</li>
+<li>HTTP服务器的文件缓存</li>
+</ul>
+</li>
+</ul>
+<p><strong>列举IE与其他浏览器不一样的特性？</strong></p>
+<ul>
+<li>IE 的渲染引擎是 Trident 与 W3C 标准差异较大：例如盒子模型的怪异模式</li>
+<li>JS 方面有很多独立的方法，例如事件处理不同：绑定/删除事件，阻止冒泡，阻止默认事件等</li>
+<li>CSS 方面也有自己独有的处理方式，例如设置透明，低版本IE中使用滤镜的方式</li>
+</ul>
+<p><strong>是否了解公钥加密和私钥加密？</strong></p>
+<ul>
+<li>私钥用于对数据进行签名，公钥用于对签名进行验证</li>
+<li>网站在浏览器端用公钥加密敏感数据，然后在服务器端再用私钥解密</li>
+</ul>
+<p><strong>WEB应用从服务器主动推送Data到客户端有那些方式？</strong></p>
+<ul>
+<li>AJAX 轮询</li>
+<li>html5 服务器推送事件<br><code>(new EventSource(SERVER_URL)).addEventListener(&quot;message&quot;, func);</code></li>
+<li>html5 Websocket<ul>
+<li><code>(new WebSocket(SERVER_URL)).addEventListener(&quot;message&quot;, func);</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>你怎么看待 Web App/hybrid App/Native App？（移动端前端 和 Web 前端区别？）</strong></p>
+<ul>
+<li><p>Web App(HTML5)：采用HTML5生存在浏览器中的应用，不需要下载安装</p>
+<ul>
+<li>优点：开发成本低，迭代更新容易，不需用户升级，跨多个平台和终端</li>
+<li>缺点：消息推送不够及时，支持图形和动画效果较差，功能使用限制（相机、GPS等）</li>
+</ul>
+<ul>
+<li>Hybrid App(混合开发)：UI WebView，需要下载安装<ul>
+<li>优点：接近 Native App 的体验，部分支持离线功能</li>
+<li>缺点：性能速度较慢，未知的部署时间，受限于技术尚不成熟</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Native App(原生开发)：依托于操作系统，有很强的交互，需要用户下载安装使用</p>
+<ul>
+<li>优点：用户体验完美，支持离线工作，可访问本地资源（通讯录，相册）</li>
+<li>缺点：开发成本高（多系统），开发成本高（版本更新），需要应用商店的审核</li>
+</ul>
+</li>
+</ul>
+<p><strong>Web 前端开发的注意事项？</strong></p>
+<ul>
+<li>特别设置 meta 标签 viewport</li>
+<li>百分比布局宽度，结合 box-sizing: border-box;</li>
+<li>使用 rem 作为计算单位。rem 只参照跟节点 html 的字体大小计算</li>
+<li>使用 css3 新特性。弹性盒模型、多列布局、媒体查询等</li>
+<li>多机型、多尺寸、多系统覆盖测试</li>
+</ul>
+<p><strong>在设计 Web APP 时，应当遵循以下几点</strong></p>
+<ul>
+<li>简化不重要的动画/动效/图形文字样式</li>
+<li>少用手势，避免与浏览器手势冲突</li>
+<li>减少页面内容，页面跳转次数，尽量在当前页面显示</li>
+<li>增强 Loading 趣味性，增强页面主次关系</li>
+</ul>
+<p><strong>平时如何管理你的项目？</strong></p>
+<ul>
+<li>规定全局样式、公共脚本</li>
+<li>严格要求代码注释(html/js/css)</li>
+<li>严格要求静态资源存放路径</li>
+<li>Git 提交必须填写说明</li>
+</ul>
+<p><strong>如何设计突发大规模并发架构？</strong></p>
+<ul>
+<li>及时响应(NoSQL缓存)</li>
+<li>数据安全(数据备份)</li>
+<li>负载均衡</li>
+</ul>
+<p><strong>说说最近最流行的一些东西吧？</strong></p>
+<ul>
+<li>ES6、Node、React、Webpack</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/16/other/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MVVM" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h2><p><strong>MVVM 由以下三个内容组成</strong></p>
+<ul>
+<li><code>View</code>：界面</li>
+<li><code>Model</code>：数据模型</li>
+<li><code>ViewModel</code>：作为桥梁负责沟通 <code>View</code> 和 <code>Model</code></li>
+</ul>
+<blockquote>
+<ul>
+<li>在 JQuery 时期，如果需要刷新 UI 时，需要先取到对应的 DOM 再更新 UI，这样数据和业务的逻辑就和页面有强耦合</li>
+<li>在 MVVM 中，UI 是通过数据驱动的，数据一旦改变就会相应的刷新对应的 UI，UI 如果改变，也会改变对应的数据。这种方式就可以在业务处理中只关心数据的流转，而无需直接和页面打交道。ViewModel 只关心数据和业务的处理，不关心 View 如何处理数据，在这种情况下，View 和 Model 都可以独立出来，任何一方改变了也不一定需要改变另一方，并且可以将一些可复用的逻辑放在一个 ViewModel 中，让多个 View 复用这个 ViewModel</li>
+</ul>
+</blockquote>
+<ul>
+<li>在 MVVM 中，最核心的也就是数据双向绑定，例如 Angluar 的脏数据检测，Vue 中的数据劫持</li>
+</ul>
+<p><strong>脏数据检测</strong></p>
+<ul>
+<li>当触发了指定事件后会进入脏数据检测，这时会调用 $digest 循环遍历所有的数据观察者，判断当前值是否和先前的值有区别，如果检测到变化的话，会调用 $watch 函数，然后再次调用 $digest 循环直到发现没有变化。循环至少为二次 ，至多为十次</li>
+<li>脏数据检测虽然存在低效的问题，但是不关心数据是通过什么方式改变的，都可以完成任务，但是这在 Vue 中的双向绑定是存在问题的。并且脏数据检测可以实现批量检测出更新的值，再去统一更新 UI，大大减少了操作 DOM 的次数</li>
+</ul>
+<p><strong>数据劫持</strong></p>
+<ul>
+<li><code>Vue</code> 内部使用了 <code>Obeject.defineProperty()</code> 来实现双向绑定，通过这个函数可以监听到 <code>set</code> 和 <code>get</code>的事件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">name</span>: <span class="string">'yck'</span> &#125;</span><br><span class="line">observe(data)</span><br><span class="line"><span class="keyword">let</span> name = data.name <span class="comment">// -&gt; get value</span></span><br><span class="line">data.name = <span class="string">'yyy'</span> <span class="comment">// -&gt; change value</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">observe</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 判断类型</span></span><br><span class="line">  <span class="keyword">if</span> (!obj || <span class="keyword">typeof</span> obj !== <span class="string">'object'</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">Object</span>.keys(data).forEach(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">    defineReactive(data, key, data[key])</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">defineReactive</span>(<span class="params">obj, key, val</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 递归子属性</span></span><br><span class="line">  observe(val)</span><br><span class="line">  <span class="built_in">Object</span>.defineProperty(obj, key, &#123;</span><br><span class="line">    enumerable: <span class="literal">true</span>,</span><br><span class="line">    configurable: <span class="literal">true</span>,</span><br><span class="line">    <span class="keyword">get</span>: function reactiveGetter() &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'get value'</span>)</span><br><span class="line">      <span class="keyword">return</span> val</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">set</span>: function reactiveSetter(newVal) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'change value'</span>)</span><br><span class="line">      val = newVal</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>以上代码简单的实现了如何监听数据的 set 和 get 的事件，但是仅仅如此是不够的，还需要在适当的时候给属性添加发布订阅</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;&#123;name&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在解析如上模板代码时，遇到 <code></code> 就会给属性 <code>name</code> 添加发布订阅</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过 Dep 解耦</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dep</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.subs = []</span><br><span class="line">  &#125;</span><br><span class="line">  addSub(sub) &#123;</span><br><span class="line">    <span class="comment">// sub 是 Watcher 实例</span></span><br><span class="line">    <span class="keyword">this</span>.subs.push(sub)</span><br><span class="line">  &#125;</span><br><span class="line">  notify() &#123;</span><br><span class="line">    <span class="keyword">this</span>.subs.forEach(<span class="function"><span class="params">sub</span> =&gt;</span> &#123;</span><br><span class="line">      sub.update()</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 全局属性，通过该属性配置 Watcher</span></span><br><span class="line">Dep.target = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>).innerText = value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Watcher</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(obj, key, cb) &#123;</span><br><span class="line">    <span class="comment">// 将 Dep.target 指向自己</span></span><br><span class="line">    <span class="comment">// 然后触发属性的 getter 添加监听</span></span><br><span class="line">    <span class="comment">// 最后将 Dep.target 置空</span></span><br><span class="line">    Dep.target = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">this</span>.cb = cb</span><br><span class="line">    <span class="keyword">this</span>.obj = obj</span><br><span class="line">    <span class="keyword">this</span>.key = key</span><br><span class="line">    <span class="keyword">this</span>.value = obj[key]</span><br><span class="line">    Dep.target = <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  update() &#123;</span><br><span class="line">    <span class="comment">// 获得新值</span></span><br><span class="line">    <span class="keyword">this</span>.value = <span class="keyword">this</span>.obj[<span class="keyword">this</span>.key]</span><br><span class="line">    <span class="comment">// 调用 update 方法更新 Dom</span></span><br><span class="line">    <span class="keyword">this</span>.cb(<span class="keyword">this</span>.value)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">name</span>: <span class="string">'yck'</span> &#125;</span><br><span class="line">observe(data)</span><br><span class="line"><span class="comment">// 模拟解析到 `&#123;&#123;name&#125;&#125;` 触发的操作</span></span><br><span class="line"><span class="keyword">new</span> Watcher(data, <span class="string">'name'</span>, update)</span><br><span class="line"><span class="comment">// update Dom innerText</span></span><br><span class="line">data.name = <span class="string">'yyy'</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>接下来,对 defineReactive 函数进行改造</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">defineReactive</span>(<span class="params">obj, key, val</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 递归子属性</span></span><br><span class="line">  observe(val)</span><br><span class="line">  <span class="keyword">let</span> dp = <span class="keyword">new</span> Dep()</span><br><span class="line">  <span class="built_in">Object</span>.defineProperty(obj, key, &#123;</span><br><span class="line">    enumerable: <span class="literal">true</span>,</span><br><span class="line">    configurable: <span class="literal">true</span>,</span><br><span class="line">    <span class="keyword">get</span>: function reactiveGetter() &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'get value'</span>)</span><br><span class="line">      <span class="comment">// 将 Watcher 添加到订阅</span></span><br><span class="line">      <span class="keyword">if</span> (Dep.target) &#123;</span><br><span class="line">        dp.addSub(Dep.target)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> val</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">set</span>: function reactiveSetter(newVal) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'change value'</span>)</span><br><span class="line">      val = newVal</span><br><span class="line">      <span class="comment">// 执行 watcher 的 update 方法</span></span><br><span class="line">      dp.notify()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>以上实现了一个简易的双向绑定，核心思路就是手动触发一次属性的 getter 来实现发布订阅的添加</p>
+</blockquote>
+<p><strong>Proxy 与 Obeject.defineProperty 对比</strong></p>
+<ul>
+<li><code>Obeject.defineProperty</code> 虽然已经能够实现双向绑定了，但是他还是有缺陷的。<ul>
+<li>只能对属性进行数据劫持，所以需要深度遍历整个对象</li>
+<li>对于数组不能监听到数据的变化</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>虽然 <code>Vue</code> 中确实能检测到数组数据的变化，但是其实是使用了 <code>hack</code> 的办法，并且也是有缺陷的</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/16/MVVM/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-MVC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>说说你对MVC和MVVM的理解</strong></p>
+<ul>
+<li><p>MVC</p>
+<ul>
+<li><p>View 传送指令到 Controller</p>
+</li>
+<li><p>Controller 完成业务逻辑后，要求 Model 改变状态</p>
+</li>
+<li><p>Model 将新的数据发送到 View，用户得到反馈</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>所有通信都是单向的</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/16/MVC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
     </nav>
   
 
@@ -1187,7 +1358,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Litten
+    		&copy; 2020 王金龙
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
